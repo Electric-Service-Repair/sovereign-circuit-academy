@@ -1,0 +1,78 @@
+name: vader_academy_app
+description: |
+  Vader Academy App - Electrical Training for the Imperial Fleet
+  Master NEC codes, conduit bending, and load calculations with the dark side.
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: '>=3.10.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State Management - The Force of Riverpod
+  flutter_riverpod: ^2.4.9
+  riverpod: ^2.4.9
+
+  # Navigation
+  go_router: ^12.1.1
+
+  # Storage - Remember your training
+  shared_preferences: ^2.2.2
+
+  # UI Components
+  google_fonts: ^6.1.0
+  flutter_svg: ^2.0.9
+
+  # Utilities
+  equatable: ^2.0.5
+  intl: ^0.18.1
+  collection: ^1.18.0
+
+  # Icons
+  cupertino_icons: ^1.0.6
+  font_awesome_flutter: ^10.6.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Linting - The dark side does not tolerate weakness
+  flutter_lints: ^3.0.1
+  riverpod_lint: ^2.3.7
+
+  # Code Generation
+  build_runner: ^2.4.7
+  freezed: ^2.4.6
+  json_serializable: ^6.7.1
+
+flutter:
+  uses-material-design: true
+
+  # Imperial Assets
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/audio/
+
+  # Sith Fonts
+  fonts:
+    - family: StarJedi
+      fonts:
+        - asset: assets/fonts/StarJedi-Regular.ttf
+        - asset: assets/fonts/StarJedi-Bold.ttf
+          weight: 700
+    - family: Orbitron
+      fonts:
+        - asset: assets/fonts/Orbitron-Regular.ttf
+        - asset: assets/fonts/Orbitron-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Orbitron-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Orbitron-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Orbitron-Black.ttf
+          weight: 900
