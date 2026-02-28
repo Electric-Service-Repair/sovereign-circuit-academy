@@ -1,101 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sovereign Circuit Academy</title>
-    <style>
-        :root { --primary: #ef4444; --secondary: #dc2626; --bg: #0f172a; --text: #f1f5f9; --card: #1e293b; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); }
-        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
-        h1 { font-size: 3rem; color: var(--primary); text-align: center; margin-bottom: 1rem; }
-        .subtitle { text-align: center; opacity: 0.8; margin-bottom: 2rem; }
-        .status { background: linear-gradient(135deg, var(--primary), var(--secondary)); padding: 1.5rem; border-radius: 8px; text-align: center; margin: 2rem 0; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
-        .card { background: var(--card); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--primary); }
-        .card h3 { color: var(--secondary); margin-bottom: 0.75rem; }
-        .progress { background: #334155; border-radius: 4px; height: 8px; margin: 1rem 0; }
-        .progress-bar { background: var(--primary); height: 100%; border-radius: 4px; width: 112%; }
-        .btn { display: inline-block; padding: 0.75rem 1.5rem; background: var(--primary); color: white; text-decoration: none; border-radius: 4px; margin: 0.5rem; }
-        .btn:hover { background: var(--secondary); }
-        footer { text-align: center; padding: 2rem; opacity: 0.7; margin-top: 2rem; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>sovereign-circuit-academy — Turbo Fleet Command</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0d1117;color:#c9d1d9;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;line-height:1.6}
+.container{max-width:900px;margin:0 auto;padding:2rem 1.5rem}
+header{border-bottom:1px solid #21262d;padding-bottom:1.5rem;margin-bottom:2rem}
+h1{color:#58a6ff;font-size:2rem;font-weight:600;margin-bottom:.5rem}
+.badge{display:inline-block;background:#1f6feb;color:#fff;padding:.2rem .6rem;border-radius:12px;font-size:.75rem;margin-right:.5rem;margin-bottom:.5rem}
+.badge.fleet{background:#238636}
+.badge.tech{background:#8b5cf6}
+.description{color:#8b949e;font-size:1.1rem;margin-top:.75rem}
+.links{margin-top:1rem;display:flex;gap:.75rem;flex-wrap:wrap}
+.links a{color:#58a6ff;text-decoration:none;padding:.4rem .8rem;border:1px solid #30363d;border-radius:6px;font-size:.85rem;transition:all .2s}
+.links a:hover{background:#161b22;border-color:#58a6ff}
+.content{background:#161b22;border:1px solid #21262d;border-radius:8px;padding:2rem;margin-top:1.5rem}
+.content h2{color:#58a6ff;margin:1.5rem 0 .75rem;font-size:1.4rem;border-bottom:1px solid #21262d;padding-bottom:.5rem}
+.content h2:first-child{margin-top:0}
+.content h3{color:#d2a8ff;margin:1.2rem 0 .5rem;font-size:1.1rem}
+.content p{margin:.5rem 0;color:#c9d1d9}
+.content ul,.content ol{margin:.5rem 0 .5rem 1.5rem}
+.content li{margin:.3rem 0;color:#c9d1d9}
+.content code{background:#1f2937;padding:.15rem .4rem;border-radius:4px;font-size:.9em;color:#f0883e}
+.content pre{background:#1f2937;padding:1rem;border-radius:6px;overflow-x:auto;margin:.75rem 0}
+.content pre code{background:none;padding:0;color:#c9d1d9}
+.content a{color:#58a6ff}
+.content blockquote{border-left:3px solid #3fb950;padding-left:1rem;margin:.75rem 0;color:#8b949e}
+.content table{width:100%;border-collapse:collapse;margin:.75rem 0}
+.content th,.content td{padding:.5rem .75rem;border:1px solid #21262d;text-align:left}
+.content th{background:#1f2937;color:#58a6ff}
+.content img{max-width:100%;border-radius:6px;margin:.5rem 0}
+footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #21262d;text-align:center;color:#484f58;font-size:.85rem}
+footer a{color:#58a6ff;text-decoration:none}
+@media(max-width:600px){.container{padding:1rem}.content{padding:1rem}h1{font-size:1.5rem}}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>🏛️ Sovereign Circuit Academy</h1>
-        <p class="subtitle">The Path of the Current • NEC 2026 Compliant</p>
-
-        <div class="status">
-            <h2>🎯 1085 Milestone: 112% COMPLETE</h2>
-            <p>T-minus 5 days to Google Badge</p>
-            <div class="progress"><div class="progress-bar"></div></div>
-        </div>
-
-        <h2>📚 Curriculum Modules</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Module 1: Sovereign 90</h3>
-                <p>Conduit bending mastery with dual-track teaching</p>
-                <p><strong>Take-up values locked:</strong> 1/2"=5", 3/4"=6", 1"=8"</p>
-            </div>
-            <div class="card">
-                <h3>Module 2: Imperial Auditor v2.0</h3>
-                <p>3-phase load calculator with 125% continuous rule</p>
-                <p><strong>NEC 210.19(A)(1) compliant</strong></p>
-            </div>
-            <div class="card">
-                <h3>Module 3: Box Fill</h3>
-                <p>NEC 314.16 containment calculations</p>
-                <p><strong>"The Force must have room to breathe"</strong></p>
-            </div>
-            <div class="card">
-                <h3>Module 4: Manual J</h3>
-                <p>HVAC thermodynamic load integration</p>
-                <p><strong>Heating/Cooling BTU calculations</strong></p>
-            </div>
-            <div class="card">
-                <h3>Hospital Node</h3>
-                <p>Real-world deployment validation</p>
-                <p><strong>NEC Article 517 ready</strong></p>
-            </div>
-            <div class="card">
-                <h3>N+1 Redundancy</h3>
-                <p>Critical circuit life-safety layer</p>
-                <p><strong>NEC 517.31 compliant</strong></p>
-            </div>
-        </div>
-
-        <h2>🛠️ Quick Tools</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Load Auditor</h3>
-                <p>Calculate VA, check phase balance</p>
-                <a href="#" class="btn">Launch Tool</a>
-            </div>
-            <div class="card">
-                <h3>Box Fill Calculator</h3>
-                <p>NEC 314.16 compliance checker</p>
-                <a href="#" class="btn">Launch Tool</a>
-            </div>
-            <div class="card">
-                <h3>Manual J Calculator</h3>
-                <p>HVAC load calculations</p>
-                <a href="#" class="btn">Launch Tool</a>
-            </div>
-        </div>
-
-        <h2>🏆 Certificate</h2>
-        <div class="card" style="text-align: center;">
-            <p>Download your Sovereign Certificate of Completion</p>
-            <a href="/certificates/template.pdf" class="btn">Download PDF</a>
-        </div>
-
-        <footer>
-            <p>"The Force must have room to breathe. The Code must be obeyed. The Path is clear."</p>
-            <p style="margin-top: 1rem;">Google Badge Target: <strong>DESTROYED</strong></p>
-        </footer>
-    </div>
+<div class="container">
+<header>
+<h1>sovereign-circuit-academy</h1>
+<div>
+<span class="badge" style="background:#8b949e">📁 Meta</span><span class="badge fleet">Turbo Fleet</span>
+</div>
+<p class="description">NEC 2026 compliant electrical calculations, HVAC thermal analysis, and Flutter mobile app for field reference</p>
+<div class="links">
+<a href="https://github.com/Turbo-the-tech-dev/sovereign-circuit-academy">GitHub Repo</a>
+<a href="https://github.com/Turbo-the-tech-dev">Turbo Fleet Command</a>
+</div>
+</header>
+<div class="content" id="readme-content">Loading...</div>
+<footer>
+<p>Part of <a href="https://github.com/Turbo-the-tech-dev">Turbo Fleet Command</a> · Powered by GitHub Pages</p>
+</footer>
+</div>
+<script>
+const readme = document.getElementById('readme-content');
+fetch('README.md')
+.then(r => r.ok ? r.text() : Promise.reject('No README'))
+.then(md => { readme.innerHTML = marked.parse(md); })
+.catch(() => { readme.innerHTML = '<p>Documentation coming soon.</p>'; });
+</script>
 </body>
 </html>
